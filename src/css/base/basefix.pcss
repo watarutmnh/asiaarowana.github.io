@@ -1,0 +1,46 @@
+/**
+ *
+ * Basic fix on general HTML elements
+ * 基本リセット
+ *
+ */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+/* applies to GIF and PNG images; avoids blurry edges */
+
+img[src$='.gif'], img[src$='.png'] {
+    image-rendering: -moz-crisp-edges;
+    /* Firefox */
+    image-rendering: -o-crisp-edges;
+    /* Opera */
+    image-rendering: -webkit-optimize-contrast;
+    /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE (non-standard property) */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input, button, select, textarea {
+    appearance: none;
+}
