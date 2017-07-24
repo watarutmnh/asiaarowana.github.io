@@ -5,7 +5,9 @@
  *
  */
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -13,7 +15,8 @@ a {
     color: inherit;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none;
     color: inherit;
 }
@@ -25,7 +28,8 @@ img {
 
 /* applies to GIF and PNG images; avoids blurry edges */
 
-img[src$='.gif'], img[src$='.png'] {
+img[src$='.gif'],
+img[src$='.png'] {
     image-rendering: -moz-crisp-edges;
     /* Firefox */
     image-rendering: -o-crisp-edges;
@@ -41,6 +45,9 @@ table {
     border-collapse: collapse;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
     appearance: none;
 }
