@@ -13,6 +13,7 @@
         "build": "npm-run-all -p build:*",
         "watch:css": "postcss src/css/index.pcss -o dist/css/index.css -w -m",
         "watch:js": "watchify -t babelify src/js/main.js -o 'uglifyjs -c -m > dist/js/app.min.js' -d -v",
+        "watch:images": "onchange 'src/images' -- npm run images",
         "watch:server": "browser-sync start -s -f 'dist, **/*.html, !node_modules/**/*.html'",
         "watch": "npm-run-all -p watch:*",
         "lint:js": "eslint src/js",
@@ -47,7 +48,6 @@
     },
     "dependencies": {
         "ace-css": "^1.1.0",
-        "slick-carousel": "^1.6.0",
         "velocity-animate": "^1.5.0"
     },
     "browserify": {
