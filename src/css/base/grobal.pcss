@@ -10,12 +10,9 @@
 @custom-media --sm (width >=40em);
 @custom-media --md (width >=52em);
 @custom-media --lg (width >=64em);
-
-/* roboto-300 - latin */
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-style: normal;
-    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/roboto-v16-latin-300.woff2') format('woff2'), url('../fonts/roboto-v16-latin-300.woff') format('woff');
+@custom-media --lthmd (width <52em);
+html {
+    @media(--lthmd) {
+        font-size: 80%;
+    }
 }
